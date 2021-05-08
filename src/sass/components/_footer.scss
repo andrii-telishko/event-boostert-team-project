@@ -1,0 +1,45 @@
+.footer-bg {
+  background-color: #212121;
+}
+
+.footer-copirite {
+  width: 100%;
+  height: 89px;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 22px;
+  padding-bottom: 25px;
+  @media screen and (min-width: 768px) {
+    height: 73px;
+    padding-top: 29px;
+    padding-bottom: 18px;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 45px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+}
+
+.copirite {
+  display: flex;
+  //   flex-wrap: wrap;
+  max-width: 521px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 3px;
+  padding-right: 3px;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 0.8;
+  color: #939393;
+
+  @media screen and (min-width: 768px) {
+    line-height: 0.86;
+    max-width: 521px;
+  }
+}
