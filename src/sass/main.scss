@@ -2,5 +2,7 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
-
-
+// @import './utilities/normalize';
+@import './utilities/variables';
+@import './utilities/breakpoints';
+@import './base/common';
