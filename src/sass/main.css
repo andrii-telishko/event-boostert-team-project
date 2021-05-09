@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 25px;
+  padding-left: 15px;
+  width: 320px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 85px;
+    padding-right: 73px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding-right: 115px;
+    padding-left: 115px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
