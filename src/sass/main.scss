@@ -3,10 +3,11 @@
  * Все паршалы подключаются сюда.
  */
 
-@import './components/hero';
-@import './components/footer';
 // @import './utilities/normalize';
 @import './utilities/variables';
 @import './utilities/breakpoints';
 @import './base/common';
 @import './utilities/buttons';
+@import './components/hero';
+@import './components/footer';
+@import './components/main-section';
