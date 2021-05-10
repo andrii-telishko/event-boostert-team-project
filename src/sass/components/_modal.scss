@@ -6,10 +6,6 @@
   height: 100%;
   background-color: $background-backdrop;
   overflow-y: scroll;
-  @media screen and (max-width: 480px){
-    padding-right: 15px;
-    padding-left: 15px;
-   }
 }
 .backdrop.is-hidden{
   opacity: 0;
@@ -24,9 +20,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-//   background-color: #fff;
+  background-color: #fff;
   height: 915px;
   width: 272px;
+  
   
 
  @media screen and (min-width: $tablet){
@@ -43,24 +40,29 @@
 .modal-svg{
   display: block;
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 25px;
-  height: 25px;
+  top: 25px;
+  right: 25px;
+   @media screen and (min-width: $desktop){
+  top: 30px;
+  right: 30px;
+  }
+  width: 30px;
+  height: 30px;
+  border: none;
 
   padding: 0;
   background-color:#FFFFFF;
   background-size: contain; 
   
-
-    &:hover .icon-close,
-    &:focus .icon-close{
-      fill: $accent;
-    }
 }
 .icon-close{
-  width: 11px;
-  height: 11px;
-  transition-duration: $time-duration;
-  transition-timing-function: $timing-function;
+  width: 17px;
+  height: 17px;
+  fill: rgba(76, 0, 254, 1);
+;
+  @media screen and (min-width: $desktop){
+  width: 25px;
+  height: 25px;
+  }
+
 }
