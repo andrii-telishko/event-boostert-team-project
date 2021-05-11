@@ -1,14 +1,35 @@
 <section class="hero">
     <div>
         <a href="./index.html" class="logo link">
-            <picture>
-                <source srcset="" type="image/webp">
-                <img class="" srcset="" src="" alt="logo" width="402" height="477">
+            <picture class="logo-img">
+                <source srcset="./images/mobile/logo@3x.png"
+                    media="(max-width: 767px)" sizes="(min-width:107px) 107px, 100vw">
+                <source srcset="./images/tablet/logo@2x.png"
+                    media="(max-width: 1279px)" sizes="(min-width: 180px) 180px, 100vw">
+                <img src="./images/desktop/logo.png" alt="logo"  width="107" height="90">
+                
             </picture>
         </a>
     </div>
     <div class="hero-content">       
         <h1 class="hero-title">FIND BEST EVENTS AROUND THE WORLD</h1>
+        <form class="search-form" name="signup_form">
+            <label>
+                <input class="form-field" type="search" name="search" placeholder="Start searching" />
+            </label>
+        
+            <label>
+                <input class="form-field" list="choose country" name="fav" id="fav" placeholder="Choose country" />
+        
+                <datalist id="choose country">
+                    <option>country</option>
+                    <option>country</option>
+                    <option>country</option>
+                    <option>country</option>
+                    <option>country</option>
+                </datalist>
+            </label>
+        </form>
     </div>
 
 </section>
