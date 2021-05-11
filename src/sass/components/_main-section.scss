@@ -52,20 +52,34 @@
 .event-name {
   font-size: 14px;
   font-weight: 700;
-  color: #dc56c5;
+  color: $accent-color-pink;
 }
 
 .event-date {
   font-weight: 400;
-  color: #ffffff;
+  color: $primary-white;
 }
 
 .event-place {
   font-size: 12px;
   font-weight: 600;
   line-height: 14.63px;
-  color: #ffffff;
+  color: $primary-white;
 }
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.icon-location {
+  display: flex;
+  fill: #fff;
+
+  margin-right: 3px;
+  width: 6px;
+  height: 9px;
+}
+
 .event-img {
   width: 128px;
   height: 161px;
@@ -118,17 +132,21 @@
 
   .event-name {
     font-size: 16px;
-    color: #dc56c5;
   }
 
   .event-place {
     font-size: 14px;
     line-height: 17.07px;
   }
+
+  .icon-location {
+    width: 7px;
+    height: 10px;
+  }
+
   .event-img {
     width: 180px;
     height: 227px;
-
     margin-top: 13px;
   }
 }
