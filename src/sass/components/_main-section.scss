@@ -39,9 +39,8 @@
   box-sizing: border-box;
   border-radius: 50px 0px;
 }
-
+//-------------------//
 .event {
-  // background-color: grey;
   width: 100%;
   height: 242px;
 
@@ -68,6 +67,9 @@
   color: #ffffff;
 }
 .event-img {
+  width: 128px;
+  height: 161px;
+
   background-color: #fff;
   display: block;
   margin: 0;
@@ -106,8 +108,28 @@
     height: 143px;
   }
 
+  // --------------------------//
   .event {
     height: 312px;
+
+    font-size: 16px;
+    line-height: 19.5px;
+  }
+
+  .event-name {
+    font-size: 16px;
+    color: #dc56c5;
+  }
+
+  .event-place {
+    font-size: 14px;
+    line-height: 17.07px;
+  }
+  .event-img {
+    width: 180px;
+    height: 227px;
+
+    margin-top: 13px;
   }
 }
 
