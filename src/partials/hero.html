@@ -17,13 +17,18 @@
         </div>      
        
         <form class="search-form" name="signup_form">
-            <label>
-                <input class="form-field" type="search" name="search" placeholder="Start searching" />
+            <label class="label-search-form">
+                    <input class="form-field symbol-close" type="search" name="search" placeholder="Start searching" />
+                    <svg class="search-svg icon-magnifier">
+                        <use href="./images/svg/main.svg#icon-search-des"></use>
+                    </svg>
             </label>
         
-            <label>
-                <input class="form-field" list="choose country" name="fav" id="fav" placeholder="Choose country" />
-        
+            <label class="label-search-form">
+                    <input class="form-field choose-country" list="choose country" name="fav" id="fav" placeholder="Choose country" />
+                    <svg class="search-svg">
+                        <use href="./images/svg/main.svg#icon-polygon-des"></use>
+                    </svg>
                 <datalist id="choose country">
                     <option>country</option>
                     <option>country</option>

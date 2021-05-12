@@ -1,5 +1,6 @@
 .search-form {
   width: 270px;
+  height: 105px;
   font-family: sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -9,9 +10,12 @@
   text-align: left;
   display: inline-flex;
   flex-wrap: wrap;
+  align-content: space-between;
 
   @media screen and (min-width: 768px) {
     width: 570px;
+    height: 40px;
+
     justify-content: space-between;
   }
 
@@ -39,10 +43,35 @@
   @media screen and (min-width: 1280px) {
   }
 }
+.label-search-form {
+  position: relative;
+}
 
 .search-svg {
   height: 12px;
   width: 12px;
   fill: $gray-text;
   left: 5px;
+  position: absolute;
+  left: 228px;
+  top: 15px;
+  pointer-events: none;
+}
+
+.choose-country::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  padding-right: 0px;
+}
+
+.form-field:focus + .search-svg {
+  opacity: 0;
+}
+.form-field:focus.choose-country::-webkit-calendar-picker-indicator {
+  pointer-events: none;
+}
+
+.form-field::-ms-reveal {
+  display: none;
+  color: $gray-text;
 }
