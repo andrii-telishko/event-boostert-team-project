@@ -75,3 +75,7 @@
   display: none;
   color: $gray-text;
 }
+
+.form-field::placeholder {
+  color: $gray-text;
+}
