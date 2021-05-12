@@ -15,10 +15,13 @@
   @media screen and (min-width: 768px) {
     width: 570px;
     height: 40px;
+
     justify-content: space-between;
   }
 
   @media screen and (min-width: 1280px) {
+    // width: 570px;
+    // justify-content: space-between;
   }
 }
 
@@ -31,6 +34,7 @@
   outline-color: $gray-text;
   padding-left: 30px;
   padding-right: 30px;
+  margin-bottom: 25px;
   background-color: $background-search-field;
 
   @media screen and (min-width: 768px) {
