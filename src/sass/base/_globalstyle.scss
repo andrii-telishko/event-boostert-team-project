@@ -1,0 +1,41 @@
+html {
+  box-sizing: border-box;
+}
+
+// body {
+//   font-family: "Roboto", sans-serif;
+//   font-size: 14px;
+//   line-height: 1.714;
+//   letter-spacing: 0.03em;
+//   color: $main-text-cl;
+//   margin: 0;
+// }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
