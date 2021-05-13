@@ -1,4 +1,4 @@
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,10 +7,10 @@
   // background-color: $background-backdrop;
   overflow-y: scroll;
   background: $background-backdrop;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-backdrop-filter: blur(3px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3px);
 }
-.backdrop.is-hidden{
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -18,54 +18,141 @@ backdrop-filter: blur(3px);
   opacity: 1;
   pointer-events: initial;
 }
-.modal{
+.modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $primary-white;
+  // background-color: $primary-white;
   height: 915px;
   width: 272px;
-  
-  
 
- @media screen and (min-width: $tablet){
-  height: 831px;
-  width: 595px;
+  text-align: center;
+  background: #fff2fd;
+  border-radius: 150px 0px;
+
+  @media screen and (min-width: $tablet) {
+    text-align: left;
+    height: 831px;
+    width: 595px;
   }
-  @media screen and (min-width: $desktop){
-  height: 1023px;
-  width: 942px;
+  @media screen and (min-width: $desktop) {
+    width: 930px;
+    height: 1023px;
   }
- 
- 
 }
-.modal-svg{
+.modal-svg {
   display: block;
   position: absolute;
   top: 25px;
   right: 25px;
-   @media screen and (min-width: $desktop){
-  top: 30px;
-  right: 30px;
+  cursor: pointer;
+
+  @media screen and (min-width: $desktop) {
+    top: 30px;
+    right: 30px;
   }
   width: 30px;
   height: 30px;
   border: none;
 
   padding: 0;
-  background-color:$primary-white;
-  background-size: contain; 
-  
+  background-color: $primary-white;
+  background-size: contain;
 }
-.icon-close{
+.icon-close {
   width: 17px;
   height: 17px;
   fill: $background-modal-button;
-;
-  @media screen and (min-width: $desktop){
-  width: 25px;
-  height: 25px;
+  @media screen and (min-width: $desktop) {
+    width: 25px;
+    height: 25px;
   }
+}
+// ----------------------
+.modal-img {
+  width: 119.5px;
+  height: 150px;
+  margin: 0;
+  margin-top: 37px;
+  margin-bottom: 7.8px;
 
+  border-radius: 50px 0px;
+  background-color: black;
+
+  @media screen and (min-width: $tablet) {
+    height: 103px;
+    width: 82px;
+    margin-top: 2px;
+    margin-bottom: 36px;
+    margin-left: 257px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 144px;
+    height: 181px;
+    margin-top: 13px;
+    margin-bottom: 41px;
+    margin-left: 393px;
+  }
+}
+
+.modal-big-img {
+  opacity: 0;
+  pointer-events: none;
+  @media screen and (min-width: $tablet) {
+    opacity: 1;
+    pointer-events: visible;
+
+    position: absolute;
+    width: 233px;
+    height: 416px;
+    left: 50px;
+    top: 141px;
+    background-color: #fff;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 360px;
+    height: 641px;
+    left: 30px;
+    top: 235px;
+  }
+}
+
+.modal-head {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #dc56c5;
+
+  margin: 0;
+  margin-bottom: 5px;
+
+  @media screen and (min-width: $tablet) {
+    padding-left: 313px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-left: 450px;
+    font-size: 24px;
+    line-height: 29.26px;
+    margin-bottom: 7px;
+  }
+}
+
+.modal-info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #0e0e0e;
+
+  margin: 0;
+  margin-bottom: 10px;
+  @media screen and (min-width: $tablet) {
+    padding-left: 313px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-left: 450px;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
 }

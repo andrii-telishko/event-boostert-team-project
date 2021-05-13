@@ -14,10 +14,17 @@
   font-weight: 500;
   line-height: 1, 1288;
   letter-spacing: 0em;
+
+  // margin-top: 10px;
+  margin-bottom: 20px;
+
   @media screen and (min-width: $tablet) {
+    margin-left: 313px;
   }
 
   @media screen and (min-width: $desktop) {
+    margin-left: 450px;
+    margin-bottom: 31px;
   }
 }
 
@@ -35,12 +42,18 @@
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: center;
+
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 23px;
 
   @media screen and (min-width: $tablet) {
     width: 255px;
   }
 
   @media screen and (min-width: $desktop) {
+    margin-top: 14px;
   }
 }
