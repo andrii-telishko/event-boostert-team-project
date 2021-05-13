@@ -1,12 +1,12 @@
 .hero {
   position: relative;
   display: flex;
-  background: rgba(11, 11, 11, 0.5);
+  background-color: rgba(11, 11, 11, 0.5);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   justify-content: center;
-  width: 100%;
+  // width: 100%;
   height: 364px;
   background-size: cover;
   background-position: center;
@@ -60,7 +60,7 @@
     }
   }
   @media screen and (min-width: $desktop) {
-    // max-width: 1600px;
+    max-width: 1280px;
     height: 446px;
     background-image: linear-gradient(to bottom, rgba(13, 13, 13, 0), rgba(14, 14, 14, 0.8)),
       url('../images/desktop/header.png');
@@ -147,7 +147,8 @@
 }
 
 .logo {
-  display: block;
+  display: inline-block;
+  background-size: contain;
   position: absolute;
   @media screen and (max-width: $tablet - 1) {
     height: 90px;
@@ -165,17 +166,21 @@
 }
 
 // .logo-img {
+//   background-size: contain;
+//   position: absolute;
+//   left: 0;
+
 //   @media screen and (max-width: $tablet - 1) {
-//     height: 90px;
+//     max-height: 90px;
 //     width: 107px;
 //   }
 //   @media screen and (min-width: $tablet) {
-//     height: 151px;
+//     max-height: 151px;
 //     width: 180px;
 //   }
 
 //   @media screen and (min-width: $desktop) {
-//     height: 201px;
+//     max-height: 201px;
 //     width: 238px;
 //   }
 // }
