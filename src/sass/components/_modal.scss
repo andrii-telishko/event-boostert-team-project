@@ -99,9 +99,11 @@
 .modal-big-img {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
   @media screen and (min-width: $tablet) {
     opacity: 1;
     pointer-events: visible;
+    visibility: visible;
 
     position: absolute;
     width: 233px;
@@ -154,5 +156,12 @@
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 20px;
+  }
+}
+
+.between-string {
+  margin-bottom: 3px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 5px;
   }
 }
