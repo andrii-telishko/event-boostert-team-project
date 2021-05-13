@@ -6,7 +6,7 @@
   margin-right: auto;
   text-align: center;
   justify-content: center;
-  // width: 100%;
+  width: 100%;
   height: 364px;
   background-size: cover;
   background-position: center;
@@ -16,7 +16,7 @@
     background-image: linear-gradient(to bottom, rgba(13, 13, 13, 0), rgba(14, 14, 14, 0.8)),
       url('../images/mobile/header.png');
     // height: 364px;
-    // width: 320px;
+    // width: 100%;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (-webkit-min-device-pixel-ratio: 2),
@@ -60,7 +60,7 @@
     }
   }
   @media screen and (min-width: $desktop) {
-    max-width: 1280px;
+    // max-width: 1280px;
     height: 446px;
     background-image: linear-gradient(to bottom, rgba(13, 13, 13, 0), rgba(14, 14, 14, 0.8)),
       url('../images/desktop/header.png');
@@ -150,6 +150,8 @@
   display: inline-block;
   background-size: contain;
   position: absolute;
+  // top: 0px;
+
   @media screen and (max-width: $tablet - 1) {
     height: 90px;
     width: 107px;
