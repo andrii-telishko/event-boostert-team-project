@@ -1,38 +1,31 @@
 <section class="hero">
-    <div class="logo-img">
-        <a href="./index.html" class="logo link">
-            <picture>
-                <source srcset="./images/desktop/logo.png" media="(min-width: 1280px)" />
-                <source srcset="./images/tablet/logo@2x.png" media="(min-width: 768px)" />
-                <source srcset="./images/mobile/logo@3x.png" media="(max-width: 767px)" />
-                <img src="./images/desktop/logo.png" alt="logo" class="img"/>
-                <!-- <source srcset="./images/mobile/logo@3x.png"
-                    media="(max-width: 767px)" sizes="(min-width:107px) 107px, 100vw">
-                    <source srcset="./images/tablet/logo@2x.png"
-                    media="(max-width: 1279px)" sizes="(min-width: 180px) 180px, 100vw">
-                    <img src="./images/desktop/logo.png" alt="logo"  width="107" height="90"> -->
-            </picture>
-        </a>
-        
-    </div>
-    <div class="hero-content"> 
+    <a href="./index.html" class="logo link">
+        <picture>
+            <source srcset="./images/desktop/logo.png" media="(min-width: 1280px)" />
+            <source srcset="./images/tablet/logo@2x.png" media="(min-width: 768px)" />
+            <source srcset="./images/mobile/logo@3x.png" media="(max-width: 767px)" />
+            <img src="./images/desktop/logo.png" alt="logo" class="img" />
+        </picture>
+    </a>
+
         <div class="title">
             <h1 class="hero-title">FIND BEST EVENTS AROUND THE WORLD</h1>
-        </div>      
-       
+        </div>
+
         <form class="search-form" name="signup_form">
             <label class="label-search-form">
-                    <input class="form-field symbol-close" type="search" name="search" placeholder="Start searching" />
-                    <svg class="search-svg icon-magnifier" width="12" height="12">
-                        <use href="./images/svg/main.svg#icon-search-des"></use>
-                    </svg>
+                <input class="form-field symbol-close" type="search" name="search" placeholder="Start searching" />
+                <svg class="search-svg icon-magnifier" width="12" height="12">
+                    <use href="./images/svg/main.svg#icon-search-des"></use>
+                </svg>
             </label>
-        
+
             <label class="label-search-form">
-                    <input class="form-field choose-country" list="choose country" name="fav" id="fav" placeholder="Choose country" />
-                    <svg class="search-svg" width="15" height="10">
-                        <use href="./images/svg/main.svg#icon-polygon-des"></use>
-                    </svg>
+                <input class="form-field choose-country" list="choose country" name="fav" id="fav"
+                    placeholder="Choose country" />
+                <svg class="search-svg" width="15" height="10">
+                    <use href="./images/svg/main.svg#icon-polygon-des"></use>
+                </svg>
                 <datalist id="choose country">
                     <option>country</option>
                     <option>country</option>
@@ -45,4 +38,3 @@
     </div>
 
 </section>
-

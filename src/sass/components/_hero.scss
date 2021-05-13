@@ -150,7 +150,7 @@
   display: inline-block;
   background-size: contain;
   position: absolute;
-  // top: 0px;
+  left: 0px;
 
   @media screen and (max-width: $tablet - 1) {
     height: 90px;
@@ -166,23 +166,3 @@
     width: 238px;
   }
 }
-
-// .logo-img {
-//   background-size: contain;
-//   position: absolute;
-//   left: 0;
-
-//   @media screen and (max-width: $tablet - 1) {
-//     max-height: 90px;
-//     width: 107px;
-//   }
-//   @media screen and (min-width: $tablet) {
-//     max-height: 151px;
-//     width: 180px;
-//   }
-
-//   @media screen and (min-width: $desktop) {
-//     max-height: 201px;
-//     width: 238px;
-//   }
-// }
