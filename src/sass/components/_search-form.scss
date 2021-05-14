@@ -47,27 +47,28 @@
 }
 
 .search-svg {
-  // height: 12px;
-  // width: 12px;
   fill: $gray-text;
-  // left: 5px;
   position: absolute;
   left: 228px;
   top: 15px;
   pointer-events: none;
+  transition: $time-transition;
 }
 
 .choose-country::-webkit-calendar-picker-indicator {
   opacity: 0;
   cursor: pointer;
   padding-right: 0px;
+  transition: $time-transition;
 }
 
 .form-field:focus + .search-svg {
   opacity: 0;
+  transition: $time-transition;
 }
 .form-field:focus.choose-country::-webkit-calendar-picker-indicator {
   pointer-events: none;
+  transition: $time-transition;
 }
 
 .form-field::-ms-reveal {
@@ -77,4 +78,26 @@
 
 .form-field::placeholder {
   color: $gray-text;
+}
+.form-field:focus::placeholder {
+  transition: $time-transition;
+}
+
+.symbol-close::-webkit-search-cancel-button {
+  /* Remove default */
+  opacity: 0;
+  cursor: pointer;
+  padding-left: 0px;
+  height: 10px;
+  width: 10px;
+  transition: $time-transition;
+}
+
+.icon-close-search {
+  display: none;
+}
+
+.symbol-close:focus ~ .icon-close-search {
+  display: block;
+  transition: $time-transition;
 }
