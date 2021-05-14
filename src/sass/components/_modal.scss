@@ -30,15 +30,20 @@
   text-align: center;
   background: #fff2fd;
   border-radius: 150px 0px;
+  padding-left: 12px;
+  padding-right: 17px;
 
   @media screen and (min-width: $tablet) {
     text-align: left;
     height: 831px;
     width: 595px;
+    padding-left: 0;
   }
   @media screen and (min-width: $desktop) {
     width: 930px;
     height: 1023px;
+    padding-left: 0;
+    padding-right: 30px;
   }
 }
 .modal-svg {
@@ -97,20 +102,14 @@
 }
 
 .modal-big-img {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  width: 0px;
+  height: 0px;
   @media screen and (min-width: $tablet) {
-    opacity: 1;
-    pointer-events: visible;
-    visibility: visible;
-
     position: absolute;
     width: 233px;
     height: 416px;
     left: 50px;
     top: 141px;
-    background-color: #fff;
   }
   @media screen and (min-width: $desktop) {
     width: 360px;

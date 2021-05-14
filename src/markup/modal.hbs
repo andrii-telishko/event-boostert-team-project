@@ -1,0 +1,19 @@
+<img src="{{_embedded.events.1.images.6.url}}" alt="{{_embedded.events.1.name}}" class="modal-img">
+<img src="{{_embedded.events.1.images.1.url}}" alt="{{_embedded.events.1.name}}" class="modal-big-img">
+<h3 class="modal-head">INFO</h3>
+<p class="modal-info">{{_embedded.events.1.name}}</p>
+<h3 class="modal-head">WHEN</h3>
+<p class="modal-info between-string">{{_embedded.events.1.dates.start.localDate}}</p>
+<p class="modal-info">
+    {{_embedded.events.1.dates.start.localTime}}({{_embedded.events.1._embedded.venues.0.city.name}}/{{_embedded.events.1._embedded.venues.0.country.name}})</p>
+<h3 class="modal-head">WHERE</h3>
+<p class="modal-info between-string">{{_embedded.events.1._embedded.venues.0.city.name}},{{_embedded.events.1._embedded.venues.0.country.name}}</p>
+<p class="modal-info">{{_embedded.events.1.promoter.name}}</p>
+<h3 class="modal-head">WHO</h3>
+<p class="modal-info">{{_embedded.events.1._embedded.attractions.2.name}}</p>
+<h3 class="modal-head">PRICES</h3>
+<p class="modal-info">Standart {{_embedded.events.1.priceRanges.0.min}}-{{_embedded.events.1.priceRanges.0.max}} {{_embedded.events.1.priceRanges.0.currency}}</p>
+<button class="button-buy">BUY TICKETS</button>
+<p class="modal-info">VIP {{_embedded.events.1.priceRanges.1.min}}-{{_embedded.events.1.priceRanges.1.max}} {{_embedded.events.1.priceRanges.1.currency}}</p>
+<button class="button-buy">BUY TICKETS</button>
+<button class="button-more-author">MORE FROM THIS AUTHOR</button>
