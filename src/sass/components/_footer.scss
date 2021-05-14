@@ -40,7 +40,7 @@
   font-family: Montserrat;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 17px;
   color: $gray-text;
   border: 1px solid #000000;
@@ -51,4 +51,18 @@
     line-height: 20px;
     max-width: 530px;
   }
+}
+
+
+.footer__link-goit {
+  color: $gray-text;
+  margin-left: 2px;
+  text-decoration: none;
+}
+
+.footer__link-goit:hover,
+.footer__link-goit:focus {
+  color: $accent-color-pink;
+  transition: $timing-function;
+  transition-duration: $time-transition;
 }
