@@ -8,6 +8,7 @@
 @import './utilities/variables';
 @import './utilities/breakpoints';
 // @import './utilities/normalize';
+@import './utilities/preloader';
 @import './base/common';
 @import './utilities/buttons';
 
@@ -17,5 +18,7 @@
 @import './components/footer';
 @import './components/main-section';
 
-@import './components/modal'
+@import './components/modal';
+
+
 

@@ -5,6 +5,7 @@ import constants from './js/constants.js';
 import './js/fetchEvents.js';
 import fetchingForm from './js/fetchEvents'
 import { debounce } from "lodash";
+import './js/preloader';
 
 function fetchEvents() {
 
@@ -23,10 +24,10 @@ refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry)
 
 function onSearchEventByCountry(e) {
     fetchingForm.fetchEventsInForm(e.target.value, refs.searchingInput.value)
-    }
-    
+}
+
 refs.searchingInput.addEventListener('input', debounce(onSearchEvent, 1000))
 
-function onSearchEvent (e) {
+function onSearchEvent(e) {
     fetchingForm.fetchEventsInForm(refs.chooseCountryInput.value, e.target.value)
-        }
+}
