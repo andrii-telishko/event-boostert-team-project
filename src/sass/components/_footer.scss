@@ -59,10 +59,13 @@
   margin-left: 2px;
   text-decoration: none;
 }
-
+.footer__link-goit:active {
+  color: $gray-text;
+}
 .footer__link-goit:hover,
 .footer__link-goit:focus {
   color: $accent-color-pink;
   transition: $timing-function;
   transition-duration: $time-transition;
 }
+
