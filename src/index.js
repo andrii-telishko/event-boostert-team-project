@@ -15,14 +15,14 @@ const API_KEY = 'CFtAODian0BKODBcnwTSMVzdAwRsrdku';
 
 function fetchEvents() {
 
-    // fetch(`${BASE_URL}/events.json?apikey=${API_KEY}`)
-    //     .then(rawResult => rawResult.json())
-    //     .then(card => {
-    //         console.log(card);
-    //         const markup = cardsTpl(card);
-    //         console.log(markup);
-    //         refs.cardContainer.innerHTML = markup;
-    //     })
+    fetch(`${BASE_URL}/events.json?apikey=${API_KEY}`)
+        .then(rawResult => rawResult.json())
+        .then(card => {
+            console.log(card);
+            const markup = cardsTpl(card);
+            console.log(markup);
+            refs.cardContainer.innerHTML = markup;
+        })
     fetch(`${BASE_URL}/events.json?apikey=${API_KEY}`)
         .then(rawResult => rawResult.json())
         .then(card => {
