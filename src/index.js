@@ -1,9 +1,6 @@
 import './sass/main.scss';
-import cardsTpl from ".././src/cards.hbs";
-
-const refs = {
-    cardContainer: document.querySelector('.main-section-event-list')
-}
+import cardsTpl from "./templates/eventCard.hbs";
+// import './js/fitchEvents.js'
 
 const BASE_URL = 'https://app.ticketmaster.com/discovery/v2';
 const API_KEY = 'CFtAODian0BKODBcnwTSMVzdAwRsrdku';
@@ -15,7 +12,7 @@ function fetchEvents() {
         .then(card => {
             console.log(card);
             const markup = cardsTpl(card);
-            console.log(markup);
+            // console.log(markup);
             refs.cardContainer.innerHTML = markup;
         })
 }
