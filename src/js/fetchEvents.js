@@ -2,7 +2,7 @@ import refs from './refs'
 import cardsTpl from '../templates/eventCard';
 import constants from './constants';
 import {fetchAllEvents} from './fetchAllEvents'
-
+import makeError from './makeError'
 
  export default {
     fetchEventsInForm(code, word) {
@@ -19,7 +19,8 @@ import {fetchAllEvents} from './fetchAllEvents'
                  
              }).then(events => {
                  if (events.page.totalElements === 0) {
-                     alert('Help')
+                    
+                     makeError();
                      refs.searchingInput.value = '';
                      fetchAllEvents();
                  } else {
