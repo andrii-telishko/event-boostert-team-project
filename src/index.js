@@ -1,10 +1,12 @@
 import './js/preloader';
 import './sass/main.scss';
-import './js/fetchAllEvents.js';
+// import './js/fetchAllEvents.js';
 import refs from './js/refs';
-import './js/fetchEvents.js';
 import fetchingForm from './js/fetchEvents';
+import {fetchAllEvents} from './js/fetchAllEvents'
 import { debounce } from 'lodash';
+
+fetchAllEvents();
 
 refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
 
