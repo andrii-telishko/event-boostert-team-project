@@ -21,7 +21,7 @@ import './js/fetchEvents.js';
 import fetchingForm from './js/fetchEvents'
 import { debounce } from "lodash";
 
-// function fetchEvents() {
+function fetchEvents() {
 
 
 //     fetch(`${BASE_URL}/events.json?apikey=${API_KEY}`)
