@@ -11,18 +11,18 @@ function fetchAllEvents() {
     fetch(`${constants.BASE_URL}/events.json?apikey=${constants.API_KEY}`)
         .then(rawResult => rawResult.json())
         .then(card => {
-            console.log(card);
+            // console.log(card);
             const markup = cardsTpl(card);
-            console.log(markup);
+            // console.log(markup);
             refs.cardContainer.innerHTML = markup;
         })
 
          fetch(`${constants.BASE_URL}/events.json?apikey=${constants.API_KEY}`)
         .then(rawResult => rawResult.json())
         .then(card => {
-            console.log(card);
+            // console.log(card);
             const markup = modalTpl(card);
-            console.log(markup);
+            // console.log(markup);
             refs.modalContainer.innerHTML = markup;
         })
 }
