@@ -25,7 +25,9 @@ function fetchAllEvents() {
             console.log(markup);
             refs.modalContainer.innerHTML = markup;
         })
-    }
+}
+    
+
         
 
     
