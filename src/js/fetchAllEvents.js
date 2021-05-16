@@ -3,14 +3,11 @@ import cardsTpl from "../templates/eventCard.hbs";
 import modalTpl from "../templates/modal.hbs";
 import constants from '../js/constants';
 
-export default {
-    function: fetchAllEvents(),
-}
-  
-function fetchAllEvents() {
+export function fetchAllEvents() {
     fetch(`${constants.BASE_URL}/events.json?apikey=${constants.API_KEY}`)
         .then(rawResult => rawResult.json())
         .then(card => {
+
             // console.log(card);
             const markup = cardsTpl(card);
             // console.log(markup);
@@ -26,7 +23,11 @@ function fetchAllEvents() {
             refs.modalContainer.innerHTML = markup;
         })
 }
-    
+
+            const markup = cardsTpl(card);
+            refs.cardContainer.innerHTML = markup;
+        })
+}
 
         
 
