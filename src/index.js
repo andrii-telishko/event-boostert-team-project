@@ -1,9 +1,11 @@
+import './js/preloader';
 import './sass/main.scss';
-import './js/fetchAllEvents.js';
+// import './js/fetchAllEvents.js';
 import refs from './js/refs';
-import './js/fetchEvents.js';
-import fetchingForm from './js/fetchEvents'
-import { debounce } from "lodash";
+import fetchingForm from './js/fetchEvents';
+import {fetchAllEvents} from './js/fetchAllEvents'
+import { debounce } from 'lodash';
+
 
 import constants from './js/constants';
 import cardsTpl from "./templates/eventCard.hbs";
@@ -11,15 +13,15 @@ import modalTpl from "./templates/modal.hbs";
 
 refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry)
 
-function onSearchEventByCountry(e) {
-    fetchingForm.fetchEventsInForm(e.target.value, refs.searchingInput.value)
-    }
-    
-refs.searchingInput.addEventListener('input', debounce(onSearchEvent, 1000))
+fetchAllEvents();
 
-function onSearchEvent (e) {
-    fetchingForm.fetchEventsInForm(refs.chooseCountryInput.value, e.target.value)
+
+refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
+
+function onSearchEventByCountry(e) {
+  fetchingForm.fetchEventsInForm(e.target.value, refs.searchingInput.value);
 }
+
 
 // код для открытия модалки
 
@@ -40,4 +42,10 @@ function onEventClick(evt) {
             refs.modalContainer.innerHTML = markup;
             
         })
+
+refs.searchingInput.addEventListener('input', debounce(onSearchEvent, 1000));
+
+function onSearchEvent(e) {
+  fetchingForm.fetchEventsInForm(refs.chooseCountryInput.value, e.target.value);
+
 }
