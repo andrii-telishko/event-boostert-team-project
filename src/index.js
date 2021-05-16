@@ -10,6 +10,7 @@ import constants from './js/constants';
 import cardsTpl from './templates/eventCard.hbs';
 import modalTpl from './templates/modal.hbs';
 
+
 refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
 
 fetchAllEvents();
