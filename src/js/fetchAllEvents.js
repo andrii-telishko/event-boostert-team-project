@@ -5,6 +5,7 @@ import constants from '../js/constants';
 import { animated } from './gsapAnimating'
 
 export function fetchAllEvents() {
+
   fetch(`${constants.BASE_URL}/events.json?apikey=${constants.API_KEY}`)
     .then(rawResult => rawResult.json())
     .then(card => {
@@ -14,14 +15,39 @@ export function fetchAllEvents() {
       refs.cardContainer.innerHTML = markup;
       animated();
       
+
+  featchEvents()
+    .then(markupEventsOfList)
+    .catch(error => {
+      alert('Something went wrong')
     });
 
-  fetch(`${constants.BASE_URL}/events.json?apikey=${constants.API_KEY}`)
-    .then(rawResult => rawResult.json())
-    .then(card => {
-      // console.log(card);
-      const markup = modalTpl(card);
+  featchEvents()
+    .then(markupEventsOfModal)
+    .catch(error => {
+      alert('Something went wrong')
+
+    });
+}
+
+
+function featchEvents() {
+  return fetch(`${constants.BASE_URL}/events.json?apikey=${constants.API_KEY}`).then(rawResult => {
+      if (!rawResult.ok) {
+                throw error;
+      }
+      return rawResult.json()
+    })
+  
+}
+
+function markupEventsOfList(card) {
+  const markup = cardsTpl(card);
+      // console.log(markup);
+      refs.cardContainer.innerHTML = markup;
+}
+function markupEventsOfModal(card) {
+  const markup = modalTpl(card);
       // console.log(markup);
       refs.modalContainer.innerHTML = markup;
-    });
 }
