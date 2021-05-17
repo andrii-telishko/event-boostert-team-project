@@ -65,15 +65,7 @@
   background-color: $primary-white;
   background-size: contain;
 }
-.icon-close {
-  width: 17px;
-  height: 17px;
-  fill: $background-modal-button;
-  @media screen and (min-width: $desktop) {
-    width: 25px;
-    height: 25px;
-  }
-}
+
 // ----------------------
 .modal-img {
   width: 102px;
