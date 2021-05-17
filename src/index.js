@@ -11,14 +11,21 @@ import cardsTpl from './templates/eventCard.hbs';
 import modalTpl from './templates/modal.hbs';
 
 
-refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
+
 
 fetchAllEvents();
+
 
 refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
 
 function onSearchEventByCountry(e) {
   fetchingForm.fetchEventsInForm(e.target.value, refs.searchingInput.value);
+}
+
+refs.searchingInput.addEventListener('input', debounce(onSearchEvent, 1000));
+
+function onSearchEvent(e) {
+  fetchingForm.fetchEventsInForm(refs.chooseCountryInput.value, e.target.value);
 }
 
 // код для открытия модалки
@@ -41,8 +48,4 @@ function onEventClick(evt) {
     });
 }
 
-refs.searchingInput.addEventListener('input', debounce(onSearchEvent, 1000));
 
-function onSearchEvent(e) {
-  fetchingForm.fetchEventsInForm(refs.chooseCountryInput.value, e.target.value);
-}

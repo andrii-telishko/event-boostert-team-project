@@ -14,21 +14,24 @@ export function fetchAllEvents() {
       // console.log(markup);
       refs.cardContainer.innerHTML = markup;
       animated();
+    
+    })
+}
       
 
-  featchEvents()
-    .then(markupEventsOfList)
-    .catch(error => {
-      alert('Something went wrong')
-    });
+      featchEvents()
+        .then(markupEventsOfList)
+        .catch(error => {
+          alert('Something went wrong')
+        });
 
-  featchEvents()
-    .then(markupEventsOfModal)
-    .catch(error => {
-      alert('Something went wrong')
+      featchEvents()
+        .then(markupEventsOfModal)
+        .catch(error => {
+          alert('Something went wrong')
 
-    });
-}
+        });
+    
 
 
 function featchEvents() {
