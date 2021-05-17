@@ -55,6 +55,14 @@ const pagination = new Pagination(document.getElementById('pagination'), {
   centerAlign: true,
 });
 
+function onScrollToTop() {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+}
+
 refs.pagination.addEventListener('click', onPagination);
 
 function onPagination(e) {
