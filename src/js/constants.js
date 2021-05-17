@@ -3,7 +3,7 @@ export default {
   API_KEY: 'CFtAODian0BKODBcnwTSMVzdAwRsrdku',
 };
 
-class Function {
+export class Function {
   //   genresId: ''
   //   searchQuery: '',
   //   countryCode: '',
