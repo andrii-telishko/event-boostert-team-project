@@ -82,13 +82,13 @@ function onPagination(e) {
 }
 
 function onPrevOrNextBtnClick() {
-  if (apiService.galleryStatus === 'ByUpcoming') {
+  if (constants.galleryStatus === 'ByUpcoming') {
     onUpcomingBtnClick();
   }
-  if (apiService.galleryStatus === 'BySearch') {
+  if (constants.galleryStatus === 'BySearch') {
     onSearchBtnClick();
   }
-  if (apiService.galleryStatus === 'ByFilter') {
+  if (constants.galleryStatus === 'ByFilter') {
     onFilterBtnClick();
   }
 }
@@ -110,5 +110,17 @@ function onSearchBtnClick() {
 function onRenderPage(newPage) {
   constants.page = newPage;
   console.log('newPage', newPage);
+  if (constants.galleryStatus === 'ByUpcoming') {
+    onUpcomingBtnClick();
+  }
+  if (constants.galleryStatus === 'ById') {
+    onIdBtnClick();
+  }
+  if (constants.galleryStatus === 'BySearch') {
+    onSearchBtnClick();
+  }
+  if (constants.galleryStatus === 'ByFilter') {
+    onFilterBtnClick();
+  }
   onScrollToTop();
 }
