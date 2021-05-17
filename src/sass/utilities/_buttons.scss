@@ -26,6 +26,9 @@
     margin-left: 450px;
     margin-bottom: 31px;
   }
+  // & > a {
+  //   text-decoration: none;
+  // }
 }
 
 .button-more-author {
@@ -56,4 +59,13 @@
   @media screen and (min-width: $desktop) {
     margin-top: 14px;
   }
+}
+
+.modal-btn {
+  color: $primary-white;
+  text-decoration: none;
+}
+.modal-a {
+  color: $background-modal-button;
+  text-decoration: none;
 }
