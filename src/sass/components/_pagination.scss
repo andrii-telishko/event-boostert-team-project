@@ -36,3 +36,32 @@
   border: 1px solid $accent-color-pink;
   cursor: pointer;
 }
+.tui-pagination {
+  height: 28px;
+  margin: 14px auto 12px;
+  line-height: normal;
+  text-align: center;
+  font-size: 0;
+  // width: 80%;
+}
+
+.tui-pagination .tui-page-btn {
+  display: inline-block;
+  position: relative;
+  width: 28px;
+  padding: 8px 0 6px;
+  margin-left: 0;
+  color: $primary-white;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 1px solid inherit;
+  border-width: 1px 0;
+  border-radius: 10px 0px;
+
+  &:hover {
+    box-shadow: 1px 1px 10px 5px #dc56c5;
+  }
+}
