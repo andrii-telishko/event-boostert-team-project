@@ -3,6 +3,8 @@ import cardsTpl from '../templates/eventCard';
 import constants from './constants';
 import {fetchAllEvents} from './fetchAllEvents'
 import makeError from './makeError'
+import { animated } from './gsapAnimating'
+
 
  export default {
     fetchEventsInForm(code, word) {
@@ -25,6 +27,7 @@ import makeError from './makeError'
                      fetchAllEvents();
                  } else {
                      this.renderEvents(events);
+                     animated();
                     }
                 })
              .catch(error => alert('Sorry!!! Something going wrong'));
