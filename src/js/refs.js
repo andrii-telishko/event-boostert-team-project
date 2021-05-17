@@ -3,4 +3,5 @@ export default {
     chooseCountryInput: document.querySelector('.choose-country'),
     searchingInput: document.querySelector('.form-field'),
     modalContainer: document.querySelector('.js-modal'),
+    pagination: document.querySelector('.pagination-list')
 }
