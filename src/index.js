@@ -10,19 +10,26 @@ import { debounce } from 'lodash';
 import constants from './js/constants';
 import cardsTpl from './templates/eventCard.hbs';
 import modalTpl from './templates/modal.hbs';
+import './js/api'
+import { startingFetchEvents, removePage, fetchEventInPagination , fetchEventsInForm} from './js/api';
+import { paginationFn } from './js/pagination';
 
-fetchAllEvents();
+// console.log(removePage);
+
+// fetchAllEvents();
+
+startingFetchEvents();
 
 refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
 
 function onSearchEventByCountry(e) {
-  fetchingForm.fetchEventsInForm(e.target.value, refs.searchingInput.value);
+  fetchEventsInForm(e.target.value, refs.searchingInput.value);
 }
 
 refs.searchingInput.addEventListener('input', debounce(onSearchEvent, 1000));
 
 function onSearchEvent(e) {
-  fetchingForm.fetchEventsInForm(refs.chooseCountryInput.value, e.target.value);
+  fetchEventsInForm(refs.chooseCountryInput.value, e.target.value);
 }
 
 // код для открытия модалки
@@ -70,3 +77,16 @@ function onAddClassIsHiddenModal() {
   refs.showModal.classList.add('is-hidden');
   document.body.classList.remove('modal-open');
 }
+
+
+
+refs.pagination.addEventListener('click', onPaginationSearch);
+
+function onPaginationSearch (e) {
+  // console.log(e.target.textContent);
+  removePage(refs.cardContainer);
+  // console.log(fetchEventInPagination(e.target.textContent-1));
+  fetchEventInPagination(+e.target.textContent-1,  refs.searchingInput.value, refs.chooseCountryInput.value)
+  
+  
+};
