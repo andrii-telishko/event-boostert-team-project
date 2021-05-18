@@ -52,7 +52,7 @@
   top: 25px;
   right: 25px;
   cursor: pointer;
-
+  background-color: $background-modal-color;
   @media screen and (min-width: $desktop) {
     top: 30px;
     right: 30px;
@@ -62,13 +62,14 @@
   border: none;
 
   padding: 0;
-  background-color: $primary-white;
+  // background-color: $primary-white;
   background-size: contain;
 }
 .icon-close {
   width: 17px;
   height: 17px;
   fill: $background-modal-button;
+  background-color: $background-modal-color;
   @media screen and (min-width: $desktop) {
     width: 25px;
     height: 25px;

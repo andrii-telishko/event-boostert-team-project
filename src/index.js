@@ -10,11 +10,7 @@ import constants from './js/constants';
 import cardsTpl from './templates/eventCard.hbs';
 import modalTpl from './templates/modal.hbs';
 
-
-
-
 fetchAllEvents();
-
 
 refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
 
@@ -48,34 +44,16 @@ function onEventClick(evt) {
     });
 }
 
-
 // Код для закриття модалки
 //Закриття модального вікна при натисканні на кнопку button[data-modal-close]
-//Очищення розмітки модалки. Це необхідно   для того,
-//щоб при наступному відкритті модального вікна, поки вантажиться   зображення, ми не бачили попереднє.
-
-refs.modalCloseBtn.addEventListener('click', onCloseModalBtn);
-
-function onCloseModalBtn(e) {
-  onAddClassIsHiddenModal();
-  onRemoveModalMarkup();
-}
-
 //Закриття модального вікна при натисканні на backdrop.
-
-refs.showModal.addEventListener('click', onCloseBackdrop);
-
-function onCloseBackdrop(e) {
-  onAddClassIsHiddenModal();
-  onRemoveModalMarkup();
-}
-
 //Закриття модального вікна після натискання клавіші ESC.
+refs.modalCloseBtn.addEventListener('click', onModalClose);
+refs.showModal.addEventListener('click', onModalClose);
+window.addEventListener('keydown', onModalClose);
 
-window.addEventListener('keydown', onCloseEscape);
-
-function onCloseEscape(e) {
-  if (e.code === 'Escape' && !refs.showModal.classList.contains('is-hidden')) {
+function onModalClose(event) {
+  if (event.target || event.target === event.currentTarget || event.code === 'Escape') {
     onAddClassIsHiddenModal();
     onRemoveModalMarkup();
   }
