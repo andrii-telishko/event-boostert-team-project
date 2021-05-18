@@ -1,4 +1,5 @@
 .backdrop {
+  font-family: $font-family-main;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +23,9 @@
 }
 .modal {
   position: absolute;
-  top: 127%;
+  // top: 127%;
+  // left: 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -37,18 +40,19 @@
   padding-right: 17px;
 
   @media screen and (min-width: $tablet) {
+    border-radius: 300px 0px;
     text-align: left;
     height: 831px;
     width: 595px;
     padding-left: 0;
-    top: 86%;
+    // top: 86%;
   }
   @media screen and (min-width: $desktop) {
     width: 942px;
     height: 1023px;
     padding-left: 0;
     padding-right: 30px;
-    top: 93%;
+    // top: 93%;
   }
 }
 .modal-svg {
