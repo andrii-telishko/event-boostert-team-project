@@ -1,12 +1,12 @@
 {{#each this._embedded.events}}
-<li class="event-item js-event-item">
+<li class="event-item js-event-item" id="{{id}}">
     <div class="event">
         <img src="{{images.1.url}}" alt="{{name}}" class="event-img">
         <h2 class="event-name element">{{name}}</h2>
         <p class="event-date element">{{dates.start.localDate}}</p>
         <div class="location">
             <svg class="icon-location">
-                <use href=".././src/images/svg/main.svg#icon-close">
+                <use href="./images/svg/main.svg#icon-local">
                 </use>
             </svg>
             <p class="event-place element">{{promoter.name}}</p>

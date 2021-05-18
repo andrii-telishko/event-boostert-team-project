@@ -26,6 +26,9 @@
     margin-left: 450px;
     margin-bottom: 31px;
   }
+  // & > a {
+  //   text-decoration: none;
+  // }
 }
 
 .button-more-author {
@@ -75,4 +78,14 @@
 .icon-close:active,
 .icon-close:hover {
   background-color: $accent-color-pink;
+}
+
+.modal-btn {
+  color: $primary-white;
+  text-decoration: none;
+}
+.modal-a {
+  color: $background-modal-button;
+  text-decoration: none;
+
 }
