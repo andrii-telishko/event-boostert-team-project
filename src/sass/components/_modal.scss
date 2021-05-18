@@ -20,7 +20,7 @@
 }
 .modal {
   position: absolute;
-  top: 50%;
+  top: 127%;
   left: 50%;
   transform: translate(-50%, -50%);
   // background-color: $primary-white;
@@ -38,12 +38,14 @@
     height: 831px;
     width: 595px;
     padding-left: 0;
+    top: 86%;
   }
   @media screen and (min-width: $desktop) {
     width: 930px;
     height: 1023px;
     padding-left: 0;
     padding-right: 30px;
+    top: 93%;
   }
 }
 .modal-svg {
