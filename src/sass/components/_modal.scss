@@ -14,7 +14,7 @@
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-   transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -67,8 +67,8 @@
   border: none;
 
   padding: 0;
-
 }
+
 .icon-close {
   width: 17px;
   height: 17px;
@@ -80,11 +80,6 @@
   }
 }
 
-  background-color: $background-modal-color;
-  background-size: contain;
-}
-
-
 .modal-img {
   width: 102px;
   height: 102px;
@@ -95,6 +90,8 @@
   border-radius: 50%;
   background-color: $background-gray;
   object-fit: cover;
+  background-color: $background-modal-color;
+  background-size: contain;
 
   @media screen and (min-width: $tablet) {
     width: 70px;
