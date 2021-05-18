@@ -31,7 +31,7 @@ refs.eventClick.addEventListener('click', onEventClick);
 
 function onEventClick(evt) {
   evt.preventDefault();
-
+console.log(evt.target);
   const eventId = evt.target.getAttribute('id');
 
   refs.showModal.classList.remove('is-hidden');
