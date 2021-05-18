@@ -17,7 +17,7 @@
     padding-left: 161px;
   }
 }
-.img {
+img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -27,4 +27,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+}
+body.modal-open{
+overflow: hidden;
 }

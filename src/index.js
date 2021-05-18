@@ -5,6 +5,7 @@ import refs from './js/refs';
 import fetchingForm from './js/fetchEvents';
 import { fetchAllEvents } from './js/fetchAllEvents';
 import { debounce } from 'lodash';
+// import './js/pagination';
 
 import constants from './js/constants';
 import cardsTpl from './templates/eventCard.hbs';
@@ -34,6 +35,7 @@ function onEventClick(evt) {
   const eventId = evt.target.getAttribute('id');
 
   refs.showModal.classList.remove('is-hidden');
+  document.body.classList.add('modal-open');
   fetch(`${constants.BASE_URL}/events/${eventId}.json?apikey=${constants.API_KEY}`)
     .then(rawResult => rawResult.json())
     .then(card => {
