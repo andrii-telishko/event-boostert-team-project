@@ -39,6 +39,7 @@ function onEventClick(evt) {
   const eventId = evt.target.getAttribute('id');
 
   refs.showModal.classList.remove('is-hidden');
+  document.body.classList.add('modal-open');
   fetch(`${constants.BASE_URL}/events/${eventId}.json?apikey=${constants.API_KEY}`)
     .then(rawResult => rawResult.json())
     .then(card => {
