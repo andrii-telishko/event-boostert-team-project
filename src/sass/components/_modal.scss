@@ -1,4 +1,5 @@
 .backdrop {
+  font-family: $font-family-main;
   position: fixed;
   top: 0;
   left: 0;
@@ -37,6 +38,7 @@
   padding-right: 17px;
 
   @media screen and (min-width: $tablet) {
+    border-radius: 300px 0px;
     text-align: left;
     height: 831px;
     width: 595px;
