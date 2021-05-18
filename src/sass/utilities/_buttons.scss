@@ -50,14 +50,15 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 23px;
+  margin-top: 25px;
 
   @media screen and (min-width: $tablet) {
     width: 255px;
+    margin-top: 43px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-top: 14px;
+    margin-top: 45px;
   }
 }
 
@@ -72,9 +73,13 @@
 }
 
 .button-buy:active,
-.button-buy:hover,
+.button-buy:hover {
+  background-color: $background-modal-button-hover;
+}
 .button-more-author:active,
-.button-more-author:hover,
+.button-more-author:hover {
+  border: 1px solid $accent-color-pink;
+}
 .icon-close:active,
 .icon-close:hover {
   background-color: $accent-color-pink;
@@ -87,5 +92,4 @@
 .modal-a {
   color: $background-modal-button;
   text-decoration: none;
-
 }
