@@ -167,7 +167,7 @@ body.modal-open {
 
 .button-more-author {
   height: 40px;
-  width: 230px;
+  width: 232px;
   border-radius: 5px;
   background-color: #fff2fd;
   color: #4c00fe;
@@ -520,6 +520,7 @@ body.modal-open {
   line-height: 22px;
   text-align: center;
   color: #dc56c5;
+  text-shadow: 20px -20px 50px, 0 0 2px, 0 0 10em #330426, 0 0 0.5em #330827, 0 0 0.1em #4b0638, 0 10px 3px #000;
 }
 
 @media screen and (min-width: 768px) {
@@ -958,31 +959,18 @@ body.modal-open {
   top: 25px;
   right: 25px;
   cursor: pointer;
-  background-color: #fff2fd;
   width: 30px;
   height: 30px;
   border: none;
   padding: 0;
+  background-color: #fff2fd;
+  background-size: contain;
 }
 
 @media screen and (min-width: 1280px) {
   .modal-svg {
     top: 30px;
     right: 30px;
-  }
-}
-
-.icon-close {
-  width: 17px;
-  height: 17px;
-  fill: #4c00fe;
-  background-color: #fff2fd;
-}
-
-@media screen and (min-width: 1280px) {
-  .icon-close {
-    width: 25px;
-    height: 25px;
   }
 }
 
@@ -997,8 +985,6 @@ body.modal-open {
   background-color: #c4c4c4;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: #fff2fd;
-  background-size: contain;
 }
 
 @media screen and (min-width: 768px) {
