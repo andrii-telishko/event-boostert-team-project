@@ -49,3 +49,43 @@ function onEventClick(evt) {
 }
 
 
+// Код для закриття модалки
+//Закриття модального вікна при натисканні на кнопку button[data-modal-close]
+//Очищення розмітки модалки. Це необхідно   для того,
+//щоб при наступному відкритті модального вікна, поки вантажиться   зображення, ми не бачили попереднє.
+
+refs.modalCloseBtn.addEventListener('click', onCloseModalBtn);
+
+function onCloseModalBtn(e) {
+  onAddClassIsHiddenModal();
+  onRemoveModalMarkup();
+}
+
+//Закриття модального вікна при натисканні на backdrop.
+
+refs.showModal.addEventListener('click', onCloseBackdrop);
+
+function onCloseBackdrop(e) {
+  onAddClassIsHiddenModal();
+  onRemoveModalMarkup();
+}
+
+//Закриття модального вікна після натискання клавіші ESC.
+
+window.addEventListener('keydown', onCloseEscape);
+
+function onCloseEscape(e) {
+  if (e.code === 'Escape' && !refs.showModal.classList.contains('is-hidden')) {
+    onAddClassIsHiddenModal();
+    onRemoveModalMarkup();
+  }
+}
+
+//Очистка розмітки модалки при закритті
+function onRemoveModalMarkup() {
+  refs.modalContainer.innerHTML = '';
+}
+//Додавання класу is-hidden
+function onAddClassIsHiddenModal() {
+  refs.showModal.classList.add('is-hidden');
+}
