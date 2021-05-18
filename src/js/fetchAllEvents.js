@@ -16,6 +16,9 @@ export function fetchAllEvents() {
       animated();
     
     })
+//   const sortByActiveDays = (a, b) => a.daysActive - b.daysActive;
+
+// console.log(users.sort(sortByActiveDays));
 }
       
 
