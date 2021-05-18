@@ -13,6 +13,7 @@
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+   transform: translate(-50%, -50%) scale(1.1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -22,7 +23,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   // background-color: $primary-white;
   height: 915px;
   width: 272px;
@@ -62,7 +64,7 @@
   border: none;
 
   padding: 0;
-  background-color: $primary-white;
+  background-color:#fff2fd;
   background-size: contain;
 }
 
