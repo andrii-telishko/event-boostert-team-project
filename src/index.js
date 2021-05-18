@@ -68,4 +68,5 @@ function onRemoveModalMarkup() {
 //Додавання класу is-hidden
 function onAddClassIsHiddenModal() {
   refs.showModal.classList.add('is-hidden');
+  document.body.classList.remove('modal-open');
 }
