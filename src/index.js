@@ -11,11 +11,7 @@ import constants from './js/constants';
 import cardsTpl from './templates/eventCard.hbs';
 import modalTpl from './templates/modal.hbs';
 
-
-
-
 fetchAllEvents();
-
 
 refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
 
@@ -50,4 +46,26 @@ function onEventClick(evt) {
     });
 }
 
+// Код для закриття модалки
+//Закриття модального вікна при натисканні на кнопку button[data-modal-close]
+//Закриття модального вікна при натисканні на backdrop.
+//Закриття модального вікна після натискання клавіші ESC.
+refs.modalCloseBtn.addEventListener('click', onModalClose);
+refs.showModal.addEventListener('click', onModalClose);
+window.addEventListener('keydown', onModalClose);
 
+function onModalClose(event) {
+  if (event.target || event.target === event.currentTarget || event.code === 'Escape') {
+    onAddClassIsHiddenModal();
+    onRemoveModalMarkup();
+  }
+}
+
+//Очистка розмітки модалки при закритті
+function onRemoveModalMarkup() {
+  refs.modalContainer.innerHTML = '';
+}
+//Додавання класу is-hidden
+function onAddClassIsHiddenModal() {
+  refs.showModal.classList.add('is-hidden');
+}
