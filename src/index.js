@@ -5,6 +5,7 @@ import refs from './js/refs';
 import fetchingForm from './js/fetchEvents';
 import { fetchAllEvents } from './js/fetchAllEvents';
 import { debounce } from 'lodash';
+// import './js/pagination';
 
 import constants from './js/constants';
 import cardsTpl from './templates/eventCard.hbs';
