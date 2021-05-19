@@ -20,11 +20,18 @@
   margin-right: 2px;
   flex-basis: calc((100% - 4 * 2px) / 2);
   margin-bottom: 30px;
+  // padding-bottom: 45px;
   position: relative;
 }
 
 .event-item:nth-last-child(-n + 2) {
   margin-bottom: 0px;
+}
+.event-item:hover,
+.event-item:focus {
+  transform: scale(1.1);
+  transition-timing-function: $timing-function;
+  transition-duration: $time-transition;
 }
 
 .event-item::after {
@@ -38,11 +45,13 @@
   border: 1px solid $pseudo-element-pink-color;
   box-sizing: border-box;
   border-radius: 50px 0px;
+
+  cursor: pointer;
 }
 //-------------------//
 .event {
   width: 100%;
-  height: 242px;
+  // height: 242px;
 
   font-size: 14px;
   line-height: 17.07px;
@@ -130,7 +139,7 @@
 
   // --------------------------//
   .event {
-    height: 312px;
+    // height: 312px;
 
     font-size: 16px;
     line-height: 19.5px;

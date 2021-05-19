@@ -8,14 +8,8 @@ export function fetchAllEvents() {
 
   fetch(`${constants.BASE_URL}/events.json?apikey=${constants.API_KEY}`)
     .then(rawResult => rawResult.json())
-    .then(card => {
-      // console.log(card);
-      const markup = cardsTpl(card);
-      // console.log(markup);
-      refs.cardContainer.innerHTML = markup;
-      animated();
-    
-    })
+    .then(markupEventsOfList)
+  animated();
 }
       
 
@@ -47,7 +41,9 @@ function featchEvents() {
 function markupEventsOfList(card) {
   const markup = cardsTpl(card);
       // console.log(markup);
-      refs.cardContainer.innerHTML = markup;
+  refs.cardContainer.innerHTML = markup;
+  
+  
 }
 function markupEventsOfModal(card) {
   const markup = modalTpl(card);

@@ -1,4 +1,5 @@
 .backdrop {
+  font-family: $font-family-main;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,11 +11,15 @@
   background: $background-backdrop;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(3px);
+  transition-timing-function: $timing-function;
+  transition-duration: $time-transition;
+  // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-duration: 400ms;
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, -50%) scale(1.1);
+  // transform: translate(-50%, -50%) scale(1.1);
 }
 .backdrop.is-open {
   opacity: 1;
@@ -22,33 +27,35 @@
 }
 .modal {
   position: absolute;
-  top: 60%;
+  top: 127%;
   left: 50%;
+
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: $time-transition, $timing-function;
   // background-color: $primary-white;
   height: 915px;
   width: 272px;
 
   text-align: center;
-  background: #fff2fd;
+  background: $background-modal-color;
   border-radius: 150px 0px;
   padding-left: 12px;
   padding-right: 17px;
 
   @media screen and (min-width: $tablet) {
+    border-radius: 300px 0px;
     text-align: left;
     height: 831px;
     width: 595px;
     padding-left: 0;
-    top: 60%;
+    top: 86%;
   }
   @media screen and (min-width: $desktop) {
     width: 942px;
     height: 1023px;
     padding-left: 0;
     padding-right: 30px;
-    top: 60%;
+    top: 93%;
   }
 }
 .modal-svg {
@@ -57,29 +64,25 @@
   top: 25px;
   right: 25px;
   cursor: pointer;
-  background-color: $background-modal-color;
+
   @media screen and (min-width: $desktop) {
     top: 30px;
     right: 30px;
   }
-  width: 30px;
-  height: 30px;
+  // width: 30px;
+  // height: 30px;
   border: none;
 
   padding: 0;
-}
-
-.icon-close {
-  width: 17px;
-  height: 17px;
-  fill: $background-modal-button;
   background-color: $background-modal-color;
-  @media screen and (min-width: $desktop) {
-    width: 25px;
-    height: 25px;
-  }
+  background-size: contain;
+}
+.icon-close:hover {
+  fill: red;
+  background-color: $background-modal-color;
 }
 
+// ----------------------
 .modal-img {
   width: 102px;
   height: 102px;
@@ -90,8 +93,6 @@
   border-radius: 50%;
   background-color: $background-gray;
   object-fit: cover;
-  background-color: $background-modal-color;
-  background-size: contain;
 
   @media screen and (min-width: $tablet) {
     width: 70px;
@@ -132,7 +133,7 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  color: #dc56c5;
+  color: $accent-color-pink;
 
   margin: 0;
   margin-bottom: 5px;
@@ -149,6 +150,8 @@
 }
 
 .modal-info {
+  display: inline-flex;
+  align-items: center;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -171,5 +174,17 @@
   margin-bottom: 3px;
   @media screen and (min-width: $desktop) {
     margin-bottom: 5px;
+  }
+}
+
+.modal-barcode {
+  height: 16px;
+  width: 24px;
+  margin-right: 13px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    height: 19.4px;
+    width: 29px;
   }
 }
