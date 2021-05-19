@@ -1,7 +1,9 @@
 import paginate from 'jw-paginate';
-import refs from './refs'
-
-
+import refs from './refs';
+import renderPages from './renderPages';
+import cardsTpl from '../templates/eventCard';
+import makeError from './makeError';
+import constants from '../js/constants'
 
 export default {
      paginationFn (
@@ -75,5 +77,35 @@ export default {
             li.innerHTML = page;
             refs.pagination.appendChild(li);
         })
+    },
+ 
+ fetchEventInPagination(pageNumber, keyword, countryCode) {
+    
+    
+    fetch(`${constants.BASE_URL}/events.json?page=${pageNumber}&keyword=${keyword}&countryCode=${countryCode}&apikey=${constants.API_KEY}`)
+        .then(response => {
+                 if (!response.ok) {
+                     throw error;
+                 }
+                 return response.json();
+                 
+             }).then(data => {
+            
+            renderPages.renderEvents(data, refs.cardContainer, cardsTpl)
+           
+            renderPages.removePage(refs.pagination);
+            this.renderPaginationItems(data.page.totalElements, pageNumber + 1);
+            
+
+             })
+         .catch(error => makeError.fetchError());
+        
+    },
+ 
+ onPaginationSearch (e) {
+  renderPages.removePage(refs.cardContainer);
+     this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
 }
 }
+
+ 
