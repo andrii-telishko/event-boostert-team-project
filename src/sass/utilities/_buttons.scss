@@ -50,11 +50,11 @@
   display: block;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 25px;
+  margin-top: 5px;
 
   @media screen and (min-width: $tablet) {
     width: 255px;
-    margin-top: 43px;
+    margin-top: 23px;
   }
 
   @media screen and (min-width: $desktop) {
@@ -88,8 +88,9 @@
 .icon-close:active,
 .icon-close:hover {
   background-color: $background-modal-button;
-  width: 35px;
-  height: 35px;
+  transform: rotate(270deg);
+  // width: 35px;
+  // height: 35px;
   fill: $accent-color-pink;
   border-radius: 50%;
   transition-timing-function: $timing-function;
