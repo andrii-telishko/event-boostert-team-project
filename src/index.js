@@ -17,12 +17,14 @@ refs.chooseCountryInput.addEventListener('change', onSearchEventByCountry);
 
 function onSearchEventByCountry(e) {
   fetchingForm.fetchEventsInForm(e.target.value, refs.searchingInput.value);
+  refs.chooseCountryInput.value = '';
 }
 
 refs.searchingInput.addEventListener('input', debounce(onSearchEvent, 1000));
 
 function onSearchEvent(e) {
   fetchingForm.fetchEventsInForm(refs.chooseCountryInput.value, e.target.value);
+  refs.chooseCountryInput.value = '';
 }
 
 // код для открытия модалки
