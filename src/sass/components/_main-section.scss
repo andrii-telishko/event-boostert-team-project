@@ -27,6 +27,12 @@
 .event-item:nth-last-child(-n + 2) {
   margin-bottom: 0px;
 }
+.event-item:hover,
+.event-item:focus {
+  transform: scale(1.1);
+  transition-timing-function: $timing-function;
+  transition-duration: $time-transition;
+}
 
 .event-item::after {
   content: '';

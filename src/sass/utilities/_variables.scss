@@ -15,8 +15,9 @@ $gray-text: #939393; // сірий колір шрифту форми пошук
 $background-mobile: rgba(14, 14, 14, 1); // фон мобільної версії
 $pseudo-element-pink-color: rgba(220, 86, 197, 0.3); // колів псевдо-елементу в картці події
 
-$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-$time-transition: 250ms;
+// $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+$time-transition: 300ms;
 $font-family-main: Montserrat;
 
 // preloader-color
