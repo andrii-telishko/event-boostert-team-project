@@ -7,6 +7,7 @@ export default {
     modalContainer: document.querySelector('.template-modal-conteiner'),
     eventClick: document.querySelector('.js-list'),
     showModal: document.querySelector('.backdrop'),
-    pagination: document.querySelector('.pagination-list')
+    pagination: document.querySelector('.pagination-list'),
+    btnScroll: document.querySelector('.scroll')
 }
 

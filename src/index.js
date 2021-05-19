@@ -5,9 +5,10 @@ import refs from './js/refs';
 import fetchingForm from './js/fetchEvents';
 import { fetchAllEvents } from './js/fetchAllEvents';
 import { debounce } from 'lodash';
-import { onEventClick } from './js/openModal'
-import { onModalClose } from './js/closeModal'
-import searchEventById from './js/searchEventByCountry'
+import { onEventClick } from './js/openModal';
+import { onModalClose } from './js/closeModal';
+import searchEventById from './js/searchEventByCountry';
+import btnScroll from './js/btnScroll'; 
 
 fetchAllEvents();
 //код для пошуку по назві і країні
