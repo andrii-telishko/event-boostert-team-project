@@ -28,6 +28,7 @@ import { animated } from './gsapAnimating'
                  } else {
                      this.renderEvents(events);
                      animated();
+                     refs.searchingInput.value = '';
                     }
                 })
              .catch(error => alert('Sorry!!! Something going wrong'));
