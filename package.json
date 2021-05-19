@@ -30,6 +30,7 @@
     "@pnotify/confirm": "^5.2.0",
     "@pnotify/core": "^5.2.0",
     "gsap": "^3.6.1",
+    "jw-paginate": "^1.0.4",
     "lodash.debounce": "^4.0.8"
   }
 }
