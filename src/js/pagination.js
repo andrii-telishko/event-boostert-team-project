@@ -1,49 +1,10 @@
-// import refs from './refs'
-// import { fetchAllEvents } from './fetchAllEvents'
-// import cardsTpl from '../templates/eventCard';
 import paginate from 'jw-paginate';
+import refs from './refs'
 
-// let pageSize = 20;
-// // let countOfPages = Math.ceil(events.length / pageSize);
 
-// let items = [];
-// // Вместо '6' - надо поставить countOfPages - количество страниц всего
-// for (let i = 1; i < 10; i++) {
-//     let li = document.createElement('li');
-//     li.innerHTML = i;
-//     refs.pagination.appendChild(li);
-//     items.push(li);
-    
-   
-// }
 
-// showPage(items[0]);
-
-// for (let item of tems) {
-//     item.addEventListener('clik', function () {
-//         showPage(this);
-//     })    
-// }
-
-// function showPage(item) {
-//       let active = document.querySelector('pagination-list li:active');
-//         if (active) {
-//             active.classList.remove('active');
-//         }
-//         item.classList.add('active');
-
-//         let pageNumber = +item.innerHTML;
-//         let start = (pageNumber - 1) * pageSize;
-//         let end = start + pageSize;
-//         // режем массив на странички
-//         let notes = cards.slice(start, end);
-
-// refs.cardContainer.innerHTML = '';
-//         for (note of notes) {
-// //----Записывваем елементы массива EVENTS
-//         }
-// }
-function paginationFn (
+export default {
+     paginationFn (
     totalItems,
     currentPage=1,
     pageSize=20,
@@ -104,6 +65,15 @@ function paginationFn (
         endIndex: endIndex,
         pages: pages
     };
-}
+},
 
-export { paginationFn };
+ renderPaginationItems(totalElements, pageNumber) {
+     const pagesArr = this.paginationFn(totalElements, pageNumber);
+        
+        pagesArr.pages.forEach(page => {
+            let li = document.createElement('li');
+            li.innerHTML = page;
+            refs.pagination.appendChild(li);
+        })
+}
+}
