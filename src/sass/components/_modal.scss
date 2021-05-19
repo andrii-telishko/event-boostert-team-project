@@ -167,3 +167,14 @@
     margin-bottom: 5px;
   }
 }
+
+.modal-barcode {
+  height: 16px;
+  width: 24px;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    height: 19.4px;
+    width: 29px;
+  }
+}
