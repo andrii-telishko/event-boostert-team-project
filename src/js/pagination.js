@@ -98,21 +98,23 @@ export default {
                  return response.json();
                  
              }).then(data => {
-            
-            renderPages.renderEvents(data, refs.cardContainer, cardsTpl)
+             
+             
+              renderPages.renderEvents(data, refs.cardContainer, cardsTpl)
            
             renderPages.removePage(refs.pagination);
-            this.renderPaginationItems(data.page.totalElements, pageNumber + 1);
-            
-
-             })
-         .catch(error => makeError.fetchError());
-        
-    },
+            this.renderPaginationItems(data.page.totalElements, pageNumber + 1);   
+                }).catch(error => makeError.fetchError());
+        },
  
- onPaginationSearch (e) {
-  renderPages.removePage(refs.cardContainer);
-     this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
+    onPaginationSearch(e) {
+        if (e.target.value === '...') {
+         refs.pagination.removeEventListener('click', pagination.onPaginationSearch.bind(pagination));
+        } else {
+           renderPages.removePage(refs.cardContainer);
+     this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value); 
+     }
+  
      
 }
 }
