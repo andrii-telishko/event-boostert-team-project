@@ -1,4 +1,6 @@
 .button-buy {
+  display: inline-block;
+  padding-top: 11px;
   height: 40px;
   width: 145px;
   border-radius: 5px;
@@ -32,6 +34,7 @@
 }
 
 .button-more-author {
+  padding-top: 10px;
   height: 40px;
   width: 232px;
   border-radius: 5px;
@@ -87,10 +90,12 @@
 }
 
 .modal-btn {
+  text-transform: uppercase;
   color: $primary-white;
   text-decoration: none;
 }
 .modal-a {
+  text-transform: uppercase;
   color: $background-modal-button;
   text-decoration: none;
 }
