@@ -84,7 +84,13 @@ export default {
             let li = document.createElement('li');
             li.innerHTML = page;
             refs.pagination.appendChild(li);
+            // li.classList.add('item-pag')
         })
+     
+     refs.pagination.firstElementChild.classList.add('active')
+    //  refs.pagination.children.classList.add('pagination-item')
+     console.log(refs.pagination.firstElementChild);
+     
     },
  
  fetchEventInPagination(pageNumber, keyword, countryCode) {
@@ -102,21 +108,42 @@ export default {
              
               renderPages.renderEvents(data, refs.cardContainer, cardsTpl)
            
-            renderPages.removePage(refs.pagination);
+                 renderPages.removePage(refs.pagination);
+                 
             this.renderPaginationItems(data.page.totalElements, pageNumber + 1);   
                 }).catch(error => makeError.fetchError());
         },
  
     onPaginationSearch(e) {
-        if (e.target.value === '...') {
-         refs.pagination.removeEventListener('click', pagination.onPaginationSearch.bind(pagination));
-        } else {
-           renderPages.removePage(refs.cardContainer);
-     this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value); 
-     }
-  
+        
+        renderPages.removePage(refs.cardContainer);
+
+        // let currentActiveBtn = document.querySelectorAll('.item-pag')
+        // console.log(currentActiveBtn);
+        // currentActiveBtn.find()
+
+    // if (currentActiveBtn) {
+    //     currentActiveBtn.classList.remove('active')
+    // }
+    //  currentActiveBtn = e.currentTarget;
+    // currentActiveBtn.classList.add('active')
+        this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
+        
+    },
+    
+//      onButtonCurrent(evt) {
+//     if (evt.target.nodeName !== 'li') {
+//         return
+//     }
+//     const currentActiveBtn = document.querySelectorAll('.active')
+//     if (currentActiveBtn) {
+//         currentActiveBtn.classList.remove('active')
+//     }
+//     const nextActiveBtn = evt.target;
+//     nextActiveBtn.classList.add('active')
+// }
      
 }
-}
+
 
  
