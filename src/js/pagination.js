@@ -54,7 +54,15 @@ export default {
 
     // create an array of pages to ng-repeat in the pager control
     let pages = Array.from(Array((endPage + 1) - startPage).keys()).map(i => startPage + i);
-
+       
+        if (totalPages > maxPages) {
+            pages.splice(10, 0, '...', totalPages)
+        }
+        
+        if (startPage === totalPages - 9) {
+            pages.splice(10, 2)
+        }
+        
     // return object with all pager properties required by the view
     return {
         totalItems: totalItems,
