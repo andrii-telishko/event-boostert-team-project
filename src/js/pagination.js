@@ -105,6 +105,7 @@ export default {
  onPaginationSearch (e) {
   renderPages.removePage(refs.cardContainer);
      this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
+     
 }
 }
 

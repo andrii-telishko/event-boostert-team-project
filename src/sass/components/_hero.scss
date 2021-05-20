@@ -132,8 +132,7 @@
   line-height: 22px;
   text-align: center;
   color: $accent-color-pink;
-  text-shadow: 20px -20px 50px, 0 0 2px, 0 0 10em #330426, 0 0 0.5em #330827, 0 0 0.1em #4b0638, 0 10px 3px #000;
-  
+  // text-shadow: 20px -20px 50px, 0 0 2px, 0 0 10em #330426, 0 0 0.5em #330827, 0 0 0.1em #4b0638, 0 10px 3px #000;
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 27px;
@@ -146,6 +145,11 @@
     font-size: 50px;
     line-height: 61px;
   }
+}
+.hero-title:active,
+.hero-title:hover {
+  text-shadow: 20px -20px 50px, 0 0 2px, 0 0 10em #330426, 0 0 0.5em #330827, 0 0 0.1em #4b0638,
+    0 10px 3px #000;
 }
 
 .logo {
