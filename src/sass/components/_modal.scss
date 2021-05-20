@@ -27,10 +27,10 @@
 }
 .modal {
   position: absolute;
-  top: 127%;
+  top: 7%;
   left: 50%;
 
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%) scale(1);
   transition: $time-transition, $timing-function;
   // background-color: $primary-white;
   height: 915px;
@@ -48,14 +48,14 @@
     height: 831px;
     width: 595px;
     padding-left: 0;
-    top: 86%;
+   
   }
   @media screen and (min-width: $desktop) {
     width: 942px;
     height: 1023px;
     padding-left: 0;
     padding-right: 30px;
-    top: 93%;
+    
   }
 }
 .modal-svg {
