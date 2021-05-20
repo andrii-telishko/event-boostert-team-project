@@ -39,7 +39,7 @@
 }
 
 .pagination-list li:hover,
-.pagination-list li:active {
+.pagination-list li.active {
   color: $accent-color-pink;
   border: 1px solid $accent-color-pink;
   cursor: pointer;
