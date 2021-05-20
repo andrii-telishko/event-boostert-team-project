@@ -72,6 +72,10 @@
 }
 
 .event-place {
+  display: flex;
+  justify-content:center;
+  text-align: justify;
+  // align-items: baseline;
   font-size: 12px;
   font-weight: 600;
   line-height: 14.63px;
@@ -84,11 +88,16 @@
 }
 .icon-location {
   display: flex;
-  fill: #fff;
+  // fill: #fff;
 
-  margin-right: 3px;
+ margin-right: 3px;
   width: 6px;
   height: 9px;
+
+   @media screen and (min-width: $tablet) {
+    width: 7px;
+    height: 10px;
+  }
 }
 
 .event-img {
@@ -154,10 +163,7 @@
     line-height: 17.07px;
   }
 
-  .icon-location {
-    width: 7px;
-    height: 10px;
-  }
+
 
   .event-img {
     max-width: 180px;
