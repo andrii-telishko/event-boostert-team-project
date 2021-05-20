@@ -7,11 +7,11 @@ export function onModalClose(event) {
   }
 }
 
-//Очистка розмітки модалки при закритті
+
 function onRemoveModalMarkup() {
   refs.modalContainer.innerHTML = '';
 }
-//Додавання класу is-hidden
+
 function onAddClassIsHiddenModal() {
   refs.showModal.classList.add('is-hidden');
   document.body.classList.remove('modal-open');
