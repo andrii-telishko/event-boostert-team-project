@@ -73,7 +73,7 @@
 
 .event-place {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   text-align: justify;
   // align-items: baseline;
   font-size: 12px;
@@ -90,11 +90,11 @@
   display: flex;
   // fill: #fff;
 
- margin-right: 3px;
+  margin-right: 3px;
   width: 6px;
   height: 9px;
 
-   @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     width: 7px;
     height: 10px;
   }
@@ -163,8 +163,6 @@
     line-height: 17.07px;
   }
 
-
-
   .event-img {
     max-width: 180px;
     height: 227px;
@@ -210,12 +208,10 @@
   margin-top: 10px;
   box-shadow: 20px -20px 50px, 0 0 2px, 0 0 10em #330426, 0 0 0.5em #330827, 0 0 0.1em #4b0638,
     0 10px 3px #000;
+
   @media screen and (min-width: $tablet) {
-<<<<<<< Updated upstream
-=======
     position: absolute;
     right: 10%;
->>>>>>> Stashed changes
     margin-left: 70px;
     margin-top: 0px;
   }
