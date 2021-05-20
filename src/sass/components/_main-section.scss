@@ -73,7 +73,7 @@
 
 .event-place {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   text-align: justify;
   // align-items: baseline;
   font-size: 12px;
@@ -90,11 +90,11 @@
   display: flex;
   // fill: #fff;
 
- margin-right: 3px;
-  width: 6px;
+  margin-right: 3px;
+  width: 9px;
   height: 9px;
 
-   @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) {
     width: 7px;
     height: 10px;
   }
@@ -162,8 +162,6 @@
     font-size: 14px;
     line-height: 17.07px;
   }
-
-
 
   .event-img {
     max-width: 180px;
