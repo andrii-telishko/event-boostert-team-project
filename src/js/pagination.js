@@ -60,7 +60,7 @@ export default {
         }
         
         if (startPage === totalPages - 9) {
-            pages.splice(10, 2)
+            pages.splice(10,0,2)
         }
         
     // return object with all pager properties required by the view
