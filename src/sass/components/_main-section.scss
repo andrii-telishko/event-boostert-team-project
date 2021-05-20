@@ -190,6 +190,22 @@
     margin-bottom: 0px;
   }
 }
-.scroll-container{
-  margin-left: 70px;
+
+.scroll {
+  background-color: inherit;
+  border: 2px solid $accent-color-pink;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 20px -20px 50px, 0 0 2px, 0 0 10em #5a0442, 0 0 0.5em #8d206e, 0 0 0.1em #720c55,
+    0 10px 3px #000;
+}
+.scroll-container {
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 20px -20px 50px, 0 0 2px, 0 0 10em #330426, 0 0 0.5em #330827, 0 0 0.1em #4b0638,
+    0 10px 3px #000;
+  @media screen and (min-width: $tablet) {
+    margin-left: 70px;
+    margin-top: 0px;
+  }
 }

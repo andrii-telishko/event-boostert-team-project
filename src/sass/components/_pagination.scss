@@ -1,5 +1,5 @@
 .pagination-bock {
-  display: flex;
+  // display: flex;
   height: 30px;
   width: 233px;
   padding: 0;
@@ -8,6 +8,9 @@
   margin-right: auto;
   //   padding-top: 5px;
   //   padding-bottom: 5px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
 }
 
 .pagination-list {

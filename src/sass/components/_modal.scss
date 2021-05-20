@@ -77,11 +77,16 @@
   background-color: $background-modal-color;
   background-size: contain;
 }
-.icon-close:hover {
-  fill: red;
-  background-color: $background-modal-color;
-}
 
+.icon-close:active,
+.icon-close:hover {
+  background-color: inherit;
+  transform: rotate(360deg);
+  fill: $accent-color-pink;
+  border-radius: 50%;
+  transition-timing-function: $timing-function;
+  transition-duration: $time-transition;
+}
 // ----------------------
 .modal-img {
   width: 102px;
@@ -150,7 +155,7 @@
 }
 
 .modal-info {
-  display: inline-flex;
+  // display: inline-flex;
   align-items: center;
   font-weight: 400;
   font-size: 16px;
@@ -160,6 +165,7 @@
   margin: 0;
   margin-bottom: 10px;
   @media screen and (min-width: $tablet) {
+    display: inline-flex;
     padding-left: 313px;
   }
   @media screen and (min-width: $desktop) {
