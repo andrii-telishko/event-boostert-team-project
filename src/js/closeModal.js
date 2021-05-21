@@ -1,7 +1,7 @@
 import refs from './refs';
 
 export function onModalClose(event) {
-  if (event.currentTarget===refs.showModal || event.target === event.currentTarget || event.code === 'Escape') {
+  if (event.currentTarget === refs.modalCloseBtn || event.target === event.currentTarget || event.code === 'Escape') {
     onAddClassIsHiddenModal();
     onRemoveModalMarkup();
   }
