@@ -12,6 +12,8 @@ import pagination from './js/pagination';
 
 startingFetchEvents();
 
+
+
 refs.searchingInput.addEventListener('input', debounce(fetchInForm.onSearchEvent, 1000));
 refs.chooseCountryInput.addEventListener('change', fetchInForm.onSearchEventByCountry);
 refs.eventClick.addEventListener('click', onEventClick);
