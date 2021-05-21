@@ -1,38 +1,54 @@
 <section class="hero">
-    <a href="./index.html" class="logo link">
-        <picture>
-            <source srcset="./images/desktop/logo.png" media="(min-width: 1280px)" />
-            <source srcset="./images/tablet/logo@2x.png" media="(min-width: 768px)" />
-            <source srcset="./images/mobile/logo@3x.png" media="(max-width: 767px)" />
-            <img src="./images/desktop/logo.png" alt="logo" class="img" />
-        </picture>
-    </a>
+  <a href="./index.html" class="logo link">
+    <picture>
+      <source srcset="./images/desktop/logo.png" media="(min-width: 1280px)" />
+      <source srcset="./images/tablet/logo@2x.png" media="(min-width: 768px)" />
+      <source srcset="./images/mobile/logo@3x.png" media="(max-width: 767px)" />
+      <img src="./images/desktop/logo.png" alt="logo" class="img" />
+    </picture>
+  </a>
 
-    <div class="hero-content">
-        <div class="title">
-            <h1 class="hero-title">FIND BEST EVENTS AROUND THE WORLD</h1>
-        </div>
-
-        <form class="search-form" name="signup_form">
-            <label class="label-search-form">
-                <input class="form-field symbol-close" type="search" name="search" placeholder="Start searching" />
-                <svg class="search-svg icon-magnifier" width="12" height="12">
-                    <use href="./images/svg/main.svg#icon-search"></use>
-                </svg>
-                <svg class="search-svg icon-close-search" width="12" height="12">
-                    <use href="./images/svg/main.svg#icon-close"></use>
-                </svg>
-            </label>
-
-            <label class="label-search-form">
-                <input class="form-field choose-country" list="choose country" name="fav" id="fav"
-                    placeholder="Choose country" />
-                <svg class="search-svg" width="15" height="10">
-                    <use href="./images/svg/main.svg#icon-polygon"></use>
-                </svg>
-                <datalist id="choose country"></datalist>
-            </label>
-        </form>
+  <div class="hero-content">
+    <div class="title">
+      <a
+        class="shine-button"
+        href="https://github.com/andrii-telishko/event-boostert-team-project/graphs/contributors"
+        target="_blank"
+        alt="team-member"
+        >Team members</a
+      >
+      <h1 class="hero-title">FIND BEST EVENTS AROUND THE WORLD</h1>
     </div>
 
+    <form class="search-form" name="signup_form">
+      <label class="label-search-form">
+        <input
+          class="form-field symbol-close"
+          type="search"
+          name="search"
+          placeholder="Start searching"
+        />
+        <svg class="search-svg icon-magnifier" width="12" height="12">
+          <use href="./images/svg/main.svg#icon-search"></use>
+        </svg>
+        <svg class="search-svg icon-close-search" width="12" height="12">
+          <use href="./images/svg/main.svg#icon-close"></use>
+        </svg>
+      </label>
+
+      <label class="label-search-form">
+        <input
+          class="form-field choose-country"
+          list="choose country"
+          name="fav"
+          id="fav"
+          placeholder="Choose country"
+        />
+        <svg class="search-svg" width="15" height="10">
+          <use href="./images/svg/main.svg#icon-polygon"></use>
+        </svg>
+        <datalist id="choose country"></datalist>
+      </label>
+    </form>
+  </div>
 </section>
