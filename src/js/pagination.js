@@ -4,6 +4,7 @@ import renderPages from './renderPages';
 import cardsTpl from '../templates/eventCard';
 import makeError from './makeError';
 import constants from '../js/constants'
+import countries from '../countries.json';
 
 export default {
     paginationFn(
@@ -113,8 +114,15 @@ export default {
     onPaginationSearch(e) {
         
         renderPages.removePage(refs.cardContainer);
-        this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
+        
+        const country = countries.find(country => country.name === refs.chooseCountryInput.value)
+        if (refs.chooseCountryInput.value === '') {
+            this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
+        } else {
+              this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, country.countryCode);
       
+        }
+        
     }
 }
 

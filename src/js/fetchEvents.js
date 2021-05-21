@@ -7,20 +7,17 @@ import { startingFetchEvents } from './fetchAllEvents';
 import pagination from './pagination';
 import countries from '../countries.json';
 
-//  const country = countries.find(country => country.name === e.target.value)
-
-    
-
 
 export default {
     onSearchEventByCountry(e) {
-    fetchEventsInForm(e.target.value, refs.searchingInput.value);
+        
+         translateCountryNameInCountryCode(refs.searchingInput.value, e.target.value)
+        
    },
     
     onSearchEvent(e) {
-        console.log(e.target.value);
-        console.log(refs.chooseCountryInput.value);
-      fetchEventsInForm(refs.chooseCountryInput.value, e.target.value);
+        
+        translateCountryNameInCountryCode( e.target.value, refs.chooseCountryInput.value)
     }
 }
     
@@ -46,5 +43,14 @@ function fetchEventsInForm(countryCode, keyword) {
             pagination.renderPaginationItems(events.page.totalElements, 1)
         }
     }).catch(error =>  makeError.fetchError());
+}
+
+function translateCountryNameInCountryCode(keyword, countryName) {
+           if (countryName === '') {
+             fetchEventsInForm( countryName, keyword);
+        } else {
+             const country = countries.find(country => country.name === countryName)
+             fetchEventsInForm(country.countryCode, keyword);
+        }
 }
 
