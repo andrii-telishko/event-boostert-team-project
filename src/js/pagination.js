@@ -4,16 +4,19 @@ import renderPages from './renderPages';
 import cardsTpl from '../templates/eventCard';
 import makeError from './makeError';
 import constants from '../js/constants'
+import countries from '../countries.json';
 
 export default {
     paginationFn(
         totalItems,
         currentPage = 1,
         pageSize = 20,
-        maxPages = 10
+        maxPages = 10,
+       
     ) {
         // calculate total pages
         let totalPages = Math.ceil(totalItems / pageSize);
+        
 
         // ensure current page isn't out of range
         if (currentPage < 1) {
@@ -59,10 +62,6 @@ export default {
             pages.splice(10, 0, '...', totalPages)
         }
         
-        if (startPage === totalPages - 9) {
-            pages.splice(10, 0, 2)
-        }
-        
         // return object with all pager properties required by the view
         return {
             totalItems: totalItems,
@@ -83,10 +82,13 @@ export default {
         pagesArr.pages.forEach(page => {
             let li = document.createElement('li');
             li.innerHTML = page;
+            li.classList.add('paginate')
+            if (page === pageNumber) {
+              li.classList.add('active')  
+            }
             refs.pagination.appendChild(li);
-            
         })
-     },
+},
  
     fetchEventInPagination(pageNumber, keyword, countryCode) {
     
@@ -106,6 +108,7 @@ export default {
                 renderPages.removePage(refs.pagination);
                  
                 this.renderPaginationItems(data.page.totalElements, pageNumber + 1);
+                
             }).catch(error => makeError.fetchError());
 
     },
@@ -113,10 +116,30 @@ export default {
     onPaginationSearch(e) {
         
         renderPages.removePage(refs.cardContainer);
-        this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
-      
+        
+        const country = countries.find(country => country.name === refs.chooseCountryInput.value)
+        if (refs.chooseCountryInput.value === '') {
+            this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
+        } else {
+            this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, country.countryCode);
+            
+            
+        }
+        
     }
 }
+
+//     changeActiveClass(evt) {
+//     const currentActiveBtn = document.querySelectorAll('.paginate')
+//         console.log(currentActiveBtn);
+//     if (currentActiveBtn) {
+//         currentActiveBtn.classList.remove('active')
+//     }
+//     const nextActiveBtn = evt.target;
+//         nextActiveBtn.classList.add('active')
+//         console.log(nextActiveBtn );
+//     }
+// }
 
      
 
