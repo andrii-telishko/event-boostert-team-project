@@ -11,10 +11,12 @@ export default {
         totalItems,
         currentPage = 1,
         pageSize = 20,
-        maxPages = 10
+        maxPages = 10,
+       
     ) {
         // calculate total pages
         let totalPages = Math.ceil(totalItems / pageSize);
+        
 
         // ensure current page isn't out of range
         if (currentPage < 1) {
@@ -60,10 +62,6 @@ export default {
             pages.splice(10, 0, '...', totalPages)
         }
         
-        if (startPage === totalPages - 9) {
-            pages.splice(10, 0, 2)
-        }
-        
         // return object with all pager properties required by the view
         return {
             totalItems: totalItems,
@@ -84,10 +82,13 @@ export default {
         pagesArr.pages.forEach(page => {
             let li = document.createElement('li');
             li.innerHTML = page;
+            li.classList.add('paginate')
+            if (page === pageNumber) {
+              li.classList.add('active')  
+            }
             refs.pagination.appendChild(li);
-            
         })
-     },
+},
  
     fetchEventInPagination(pageNumber, keyword, countryCode) {
     
@@ -107,6 +108,7 @@ export default {
                 renderPages.removePage(refs.pagination);
                  
                 this.renderPaginationItems(data.page.totalElements, pageNumber + 1);
+                
             }).catch(error => makeError.fetchError());
 
     },
@@ -119,12 +121,25 @@ export default {
         if (refs.chooseCountryInput.value === '') {
             this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, refs.chooseCountryInput.value);
         } else {
-              this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, country.countryCode);
-      
+            this.fetchEventInPagination(+e.target.textContent - 1, refs.searchingInput.value, country.countryCode);
+            
+            
         }
         
     }
 }
+
+//     changeActiveClass(evt) {
+//     const currentActiveBtn = document.querySelectorAll('.paginate')
+//         console.log(currentActiveBtn);
+//     if (currentActiveBtn) {
+//         currentActiveBtn.classList.remove('active')
+//     }
+//     const nextActiveBtn = evt.target;
+//         nextActiveBtn.classList.add('active')
+//         console.log(nextActiveBtn );
+//     }
+// }
 
      
 

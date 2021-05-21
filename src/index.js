@@ -28,3 +28,5 @@ refs.pagination.addEventListener('click', pagination.onPaginationSearch.bind(pag
 
 
 
+
+
